@@ -2,7 +2,7 @@
 ## to install, run the following in a terminal
 ## `pip install asf-search`
 ## Then from the correct folder in your terminal run:
-## `python asf-search-script-2026-06-18_01-21-15.py`
+## `python asf-search-script-2026-06-18_01-36-37.py`
 ## 
 ## For more information, see the official documentation
 ## https://docs.asf.alaska.edu/asf_search/basics/
@@ -11,14 +11,19 @@ import pprint
 
 opts=asf.ASFSearchOptions(**{
     "maxResults": 250,
-    "bbox": [
-        -116.039883963679,
-        42.19565399705729,
-        -110.94222771367899,
-        44.37068324141245
+    "beamSwath": [
+        "IW"
     ],
+    "flightDirection": "DESCENDING",
+    "platform": [
+        "SC"
+    ],
+    "polarization": [
+        "HH+HV"
+    ],
+    "end": "2025-12-24T04:59:59Z",
     "dataset": [
-        "SLC-BURST"
+        "SENTINEL-1"
     ]
 })
 
