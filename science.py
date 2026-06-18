@@ -22,15 +22,14 @@ opts = asf.ASFSearchOptions(
     }
 )
 
-## if the search requires authentication, uncomment
-## the lines below, and enter your EDL credentials when prompted
-## (use `session.auth_with_token(getpass('EDL Token'))` instead if a CMR bearer token is required)
-from get_pass import get_pass
 
-session = asf.ASFSession()
-session.auth_with_creds(input("fairbanksgeoman_a11y"), getpass("EDL Password"))
-opts.session = session
-# submit to on demand
+
+
+
+
+
+
+
 
 results = asf.search(opts=opts)
 pprint.pp(results.geojson())
